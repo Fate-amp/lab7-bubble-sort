@@ -11,3 +11,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 23-03-2026 11:45
 - **Prompt**: tell me how to write a bubble sort application
 
+### 23-03-2026 11:54
+- **Prompt**: i want to implement it using pointers, not nested loops. can you help me with the implementation?
+
