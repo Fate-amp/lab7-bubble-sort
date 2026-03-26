@@ -23,3 +23,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 26-03-2026 22:19
 - **Prompt**: Log the following interaction: - User asked for a bubble sort skeleton with stubs and TODO comments - User demonstrated strong understanding through Socratic questioning: understood the algorithm (multiple passes pushing largest elements to end), the loop structure needed, comparison/swap operations, and edge cases - Created a skeleton bubble sort implementation in main.py with:   - Outer loop for multiple passes   - Inner loop for adjacent element comparisons   - TODO comments for: swap tracking, comparison condition, swap implementation, and early return   - 5 test cases covering unsorted, sorted, reverse, single element, and empty arrays   - Full docstrings and helpful hints - User now ready to implement the logic with clear scaffolding in place
 
+### 26-03-2026 22:34
+- **Prompt**: Can you set up testing for this app, using basic pystest features and create 5 tests?
+
