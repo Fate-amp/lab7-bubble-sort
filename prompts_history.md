@@ -17,3 +17,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 26-03-2026 21:57
 - **Prompt**: Can you help me learn by writing a skeleton bubble sort app with stubs functions, with comments and TODOs that will indicate what I need to do?
 
+### 26-03-2026 22:18
+- **Prompt**: 1. The main idea is that we swap elements next to each other and eventually, the biggest element is gonna be at the end and next time we swap until the last element in the last iteration and we continue until the whole list is sorted 2. I think I'l need a loop with a length of the list 3. comparing two adjacent elements, swapping if the first one's bigger 4. if no swap happens in the first iteration, that means the array is already sorted so we return the array itself. Also if the array has only one element. If it's in reverse order, then we'll have as many swaps as the length of the array so we can just reverse the array abnd return it
+
