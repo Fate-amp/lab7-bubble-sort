@@ -41,3 +41,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 26-03-2026 22:48
 - **Prompt**: Append a new JOURNAL.md interaction entry for this prompt:  User prompt: "I would like to visualize the sorting as it is happening. First, I would like to explore a terminal based approach. What do you suggest?"  Response summary (no code changes yet): - Provided guidance for terminal-based bubble sort visualization approaches. - Suggested beginner-to-advanced options:   1) print-based frames with delay and clear-screen   2) Rich-based colored bars and highlights   3) curses/textual-style full-screen animation - Recommended starting with a simple print-frame renderer first for learning. - Used Socratic questioning style to help user choose desired interactivity/speed/detail before implementation.  Changes made: - No repository file edits other than this required JOURNAL.md log entry.  Context and rationale: - User requested exploration and suggestions before implementation; guidance focused on approachable terminal visualization paths and tradeoffs.  Model: GPT-5.3-Codex Socratic mode: ON
 
+### 26-03-2026 22:53
+- **Prompt**: I want to do the print-frame indices but it's kinda not intuitive for me, can you help me set steps in my mind and also on how is the UI supposed to look like?
+
