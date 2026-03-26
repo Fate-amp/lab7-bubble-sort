@@ -44,3 +44,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 26-03-2026 22:53
 - **Prompt**: I want to do the print-frame indices but it's kinda not intuitive for me, can you help me set steps in my mind and also on how is the UI supposed to look like?
 
+### 26-03-2026 23:05
+- **Prompt**: Would the ASCII bar display itself in place, so that it looks like an animation, or it going to be a series of dumps of the state of the list?
+
