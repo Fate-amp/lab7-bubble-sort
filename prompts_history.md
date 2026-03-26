@@ -47,3 +47,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 26-03-2026 23:05
 - **Prompt**: Would the ASCII bar display itself in place, so that it looks like an animation, or it going to be a series of dumps of the state of the list?
 
+### 26-03-2026 23:11
+- **Prompt**: update the journal and then: I am interested in the In-place redraw option. Help me implement this. Create the stubs and todos in main.py
+
