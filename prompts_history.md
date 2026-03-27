@@ -239,3 +239,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 23:50
 - **Prompt**: clean up readme with clear, concise instructions
 
+### 27-03-2026 23:51
+- **Prompt**: Append a new JOURNAL.md entry for this interaction.  User prompt: "clean up readme with clear, concise instructions"  Changes made: - Rewrote README.md into a concise, task-oriented format. - Added a streamlined Quick Start section with minimal setup/run steps:   - create venv   - activate venv   - install requirements   - run tests   - run app - Simplified run-mode instructions to show exactly how to toggle terminal vs pygame mode in main.py. - Reduced explanatory verbosity and removed redundant sections while preserving key operational details. - Kept a compact file layout section with clear responsibility labels. - Retained compatibility note about `pygame-ce` and `import pygame`.  Validation: - Documentation-only update; no code behavior changes required.  Context and reasons: - User requested a clear and concise README; update prioritizes quick onboarding and actionable commands.  Model: GPT-5.3-Codex Socratic mode: ON
+
