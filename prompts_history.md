@@ -107,3 +107,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 20:09
 - **Prompt**: i don't understand what _cell_row is trying to achieve
 
+### 27-03-2026 20:11
+- **Prompt**: give me an example of an input and an ouput for this function
+
