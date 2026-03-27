@@ -119,3 +119,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 20:16
 - **Prompt**: now give me example input and output for _build_marker_row
 
+### 27-03-2026 20:16
+- **Prompt**: Append a new JOURNAL.md entry for this interaction.  User prompt: "now give me example input and output for _build_marker_row"  Response summary: - No code edits performed. - Provided concrete input/output examples for _build_marker_row function. - Explained that markers place '^' under specified indices using same fixed-width alignment as _cell_row. - Showed normal case (two indices marked), edge case (no indices marked), and single index marked.  Changes made: - No repository code changes; journal update only.  Context and reasons: - User requested example inputs/outputs to clarify _build_marker_row behavior before implementation.  Model: GPT-5.3-Codex Socratic mode: ON
+
