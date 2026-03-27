@@ -116,3 +116,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 20:14
 - **Prompt**: what's the problem with the current implementation?
 
+### 27-03-2026 20:16
+- **Prompt**: now give me example input and output for _build_marker_row
+
