@@ -224,3 +224,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 23:37
 - **Prompt**: Append a new JOURNAL.md entry for this interaction.  User prompt: "update README based on the pygame implementation"  Changes made: - Updated README.md to align with actual pygame implementation in main.py. - Added project-contents entries for terminal and pygame visualizers. - Added requirements.txt to documented project contents. - Updated setup instructions to install dependencies via `python -m pip install -r requirements.txt`. - Added a dedicated Pygame Visualization section with:   - feature summary   - current run behavior (pygame visualizer enabled by default in main.py)   - run command   - note to close pygame window to end visualization   - dependency note explaining `pygame-ce` usage with `import pygame`. - Kept existing terminal visualization and testing sections, updated for consistency.  Validation: - Read back README.md to verify content and formatting.  Context and reasons: - User requested docs update to reflect newly implemented pygame visualization behavior and dependency setup.  Model: GPT-5.3-Codex Socratic mode: ON
 
+### 27-03-2026 23:41
+- **Prompt**: main.py is too big and looks messy. Can you refactor the project and enforce the separation of concerns between UI and Logic? Use several files if needed
+
