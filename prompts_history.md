@@ -62,3 +62,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 19:45
 - **Prompt**: which function should i start with implementing? And explain to me the flow in clear steps, it's not intuitive for me
 
+### 27-03-2026 19:50
+- **Prompt**: let's start with 1. what's wrong with my current implementation? help me figure it out. what am i supposed to handle in this function?
+
