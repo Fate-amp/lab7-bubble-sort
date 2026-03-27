@@ -110,3 +110,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 20:11
 - **Prompt**: give me an example of an input and an ouput for this function
 
+### 27-03-2026 20:12
+- **Prompt**: so it's just about asserting a certain blank space?
+
