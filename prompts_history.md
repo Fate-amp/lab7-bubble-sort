@@ -155,3 +155,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 21:58
 - **Prompt**: Can you implement the stubs for it?
 
+### 27-03-2026 22:00
+- **Prompt**: Append a new JOURNAL.md entry for this interaction.  User prompt: "Can you implement the stubs for it?"  Changes made: - Updated main.py to implement screenshot-style visualization stubs (not full logic), including:   - Reworked _draw_frame docstring and TODOs to match screenshot format requirements.   - Replaced current _draw_frame implementation with TODO-only scaffold and pass.   - Reworked bubble_sort_visual into TODO-only screenshot-oriented scaffold returning values.   - Kept safe default behavior by commenting out visual demo invocation in main(). - Preserved core bubble_sort behavior and tests.  Validation: - Ran pytest with project venv: 5 passed.  Context and reasons: - User asked specifically for stubs, so rendering/animation logic was intentionally left for user implementation while preserving a runnable project baseline.  Model: GPT-5.3-Codex Socratic mode: ON
+
