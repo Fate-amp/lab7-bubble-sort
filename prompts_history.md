@@ -65,3 +65,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 19:50
 - **Prompt**: let's start with 1. what's wrong with my current implementation? help me figure it out. what am i supposed to handle in this function?
 
+### 27-03-2026 19:51
+- **Prompt**: how do i scale it? and how do implement the edge case where all values are the same?
+
