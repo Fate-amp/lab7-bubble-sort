@@ -164,3 +164,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 22:29
 - **Prompt**: Append a new JOURNAL.md entry for this interaction.  User prompt: "There are many things wrong with my current implementation. walk me through them from the beginning"  Changes made: - No code edits in this interaction. - Performed code review of main.py and runtime checks. - Ran pytest: 5 passed. - Identified issues in visualization path and helper usage; prepared ordered walkthrough from highest impact to lower impact.  Context and reasons: - User requested a from-the-beginning walkthrough of current implementation issues before additional edits.  Model: GPT-5.3-Codex Socratic mode: ON
 
+### 27-03-2026 22:35
+- **Prompt**: since this implementation marks the row at the left displayed index, how can I change the last implementation so it matches this requirement?
+
