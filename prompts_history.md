@@ -212,3 +212,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 23:26
 - **Prompt**: Append a new JOURNAL.md entry for this interaction.  User prompt: "Still, the os.system is being flagged deprecated. what would be a good alternative for this?"  Changes made: - Updated main.py to remove `os.system`-based terminal clear. - Replaced shell clear call with ANSI-based clear in `_clear_terminal()`:   - `print("\\033[2J\\033[H", end="")` - Added `_enable_windows_vt_mode()` helper using `ctypes` to enable ANSI processing on Windows consoles when available. - Called `_enable_windows_vt_mode()` at the start of `bubble_sort_visual()`. - Updated imports: removed `os`, added `ctypes`.  Validation: - Ran pytest in venv: 5 passed. - Ran main.py in venv: script executed successfully.  Context and reasons: - User reported deprecation/security lint flag on `os.system`; changes avoid shell command invocation while preserving cross-platform terminal clear behavior.  Model: GPT-5.3-Codex Socratic mode: ON (direct implementation per user request)
 
+### 27-03-2026 23:31
+- **Prompt**: Can you implement a Pygame based visualization? Install Pygame and add a requirements.txt file
+
