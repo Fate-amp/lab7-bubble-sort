@@ -47,6 +47,42 @@ The script runs several built-in examples:
 - Single-element list
 - Empty list
 
+## Terminal Visualization
+
+The project also includes a terminal animation for bubble sort in `bubble_sort_visual`.
+
+Current frame format:
+- `Pass`: current bubble-sort pass (1-based)
+- `Comparing index`: left index `j` being compared with `j + 1`
+- `Action`: one of `Comparing`, `Swapped`, or `No swap`
+- `Swapped this step`: whether the current comparison caused a swap
+- `Unsorted end index`: right boundary of the unsorted section
+
+Each frame prints one row per index in the form:
+
+```text
+index | ####
+```
+
+A caret `^` is shown on the row of the left compared index.
+
+### Enable Visualization Demo
+
+In `main.py`, uncomment the visualization demo lines near the bottom:
+
+```python
+# visual_input = [14, 1, 7, 13, 12, 2, 8, 10, 6, 5, 0, 3, 11, 9, 4]
+# bubble_sort_visual(visual_input, delay=0.15)
+```
+
+Then run:
+
+```powershell
+python main.py
+```
+
+Tip: Increase `delay` (for example `0.3`) to slow down the animation.
+
 ## Run Tests
 
 ```powershell

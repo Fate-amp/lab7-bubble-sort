@@ -13,6 +13,7 @@ When I provided the context and asked specific details about a function or a fea
 
 * **Failures:** Describe specific instances where CoPilot failed (hallucinations, over-engineering, or logical errors).
 I don't know why, might be because I used the free models, but AI failed to understand I wanted to implement the bar display at first and implemented the stubs for in-place visulization, showing the numbers and how they were swapped in one line. Also, at first, when I asked for stubs, it implemented them without me asking it to. There were a lot of hallucinations compared to the last time.
+Update: Again, Copilot added some dead code and also deprecated code, like in the last project, that was unintended. And when I asked it to remove the redundant code it didn't(The model is GPT Codex, which I've seen suggest deprecated code and ignoring the user's prompt to remove them before)
 
 * **Analysis:** Why do you think these failures happened, and how did they impact your progress?
 I assume because I used a free, weaker model sometimes(to save my requests for more important tasks) and also maybe because I wasn't clear enough in my prompts

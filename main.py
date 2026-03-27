@@ -4,6 +4,7 @@ A simple sorting algorithm that repeatedly steps through the list,
 compares adjacent elements, and swaps them if they're in the wrong order.
 """
 
+import os
 import time
 
 
@@ -28,7 +29,7 @@ def bubble_sort(arr):
         
         # TODO: Track whether any swap occurred in this pass
         # If no swaps occur, the array is already sorted and we can return early
-        swapped=False
+        swapped = False
         # TODO: Create the inner loop that compares adjacent elements
         # Each pass should compare: arr[0] with arr[1], arr[1] with arr[2], etc.
         for j in range(len(arr) - 1 - i):
@@ -40,40 +41,26 @@ def bubble_sort(arr):
             #     TODO: Swap arr[j] and arr[j+1]
             #     You can use tuple unpacking: arr[j], arr[j+1] = arr[j+1], arr[j]
             
-            if arr[j]>arr[j+1]:
-                arr[j],arr[j+1]=arr[j+1],arr[j]
-                swapped=True
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
         if not swapped:
             return arr
     # TODO: Return the sorted array
     return arr
 
 
-def _cell_row(values, width=4):
-    """Return a fixed-width row so each frame stays aligned."""
-    # TODO: Format each value to a fixed width and join into one row string.
-    # TODO: Consider dynamic width based on largest absolute value.
-    row = [f"{value:>{width}}" for value in values]
-    return " ".join(row)
+def _bar_for_value(value):
+    """Convert one numeric value into a screenshot-style bar."""
+    return "#" * max(0, int(value))
 
 
-def _build_marker_row(length, marker_index=None, width=4):
-    """Build marker row that points to compared indices with '^'."""
-    # TODO: Create a marker list of size 'length'.
-    # TODO: Put '^' under left_index and right_index, blank elsewhere.
-    # TODO: Return aligned marker row string.
-    markers = []
-
-    for i in range(length):
-        if i == marker_index:
-            markers.append(f"{'^':>{width}}")
-        else:
-            markers.append(" " * width)        
-
-    return " ".join(markers)
+def _clear_terminal():
+    """Clear terminal in a cross-platform way."""
+    os.system("cls" if os.name == "nt" else "clear")
 
 
-def _draw_frame(arr, pass_index, compare_index, end_index, action, delay=0.25):
+def _draw_frame(arr, pass_index, compare_index, end_index, action, swapped_this_step, delay=0.25):
     """
     Draw one screenshot-style frame for the sorting animation.
 
@@ -86,21 +73,20 @@ def _draw_frame(arr, pass_index, compare_index, end_index, action, delay=0.25):
       ...
       ^
     """
-    # TODO 1: Clear terminal in-place (ANSI) for animation effect.
-    # TODO 2: Print header with pass index, compare index, and swapped/action info.
-    # TODO 3: For each array element, print one line in format: "index | ####".
-    # TODO 4: Print caret marker line for current compare index.
-    # TODO 5: Pause using delay.
-    print("\033[H\033[J", end="")
-    print(f"Pass: {pass_index} | Comparing indices: {compare_index} | Swapped: {action}")
+    _clear_terminal()
+    print(
+        f"Pass: {pass_index} | Comparing index: {compare_index} | "
+        f"Action: {action} | Swapped this step: {swapped_this_step}"
+    )
+    print(f"Unsorted end index: {end_index}")
 
     for index, value in enumerate(arr):
-        bar = "#" * max(0, int(value))
+        bar = _bar_for_value(value)
         print(f"{index} | {bar}")
 
         # Mark the left compared row, matching the screenshot-style behavior.
         if compare_index is not None and index == compare_index:
-            print("^")
+            print("    ^")
 
     time.sleep(delay)
 
@@ -112,35 +98,30 @@ def bubble_sort_visual(arr, delay=0.25):
     This is a learning scaffold and intentionally leaves rendering logic open.
     """
     values = arr.copy()
-
-    # TODO 1: Keep a copy of original values for final print.
-    # TODO 2: Handle edge cases (empty list or single item).
-    # TODO 3: Loop over bubble-sort passes.
-    # TODO 4: In each compare step, compute swapped = True/False.
-    # TODO 5: Call _draw_frame with screenshot-style metadata.
-    # TODO 6: After sorting, print:
-    #         Original: [...]
-    #         Sorted:   [...]
     original = values.copy()
 
     if len(values) <= 1:
-        _draw_frame(values, 0, 0 if values else None, 0, False, delay)
+        _draw_frame(values, 0, 0 if values else None, 0, "Trivial", False, delay)
         print(f"Original: {original}")
         print(f"Sorted:   {values}")
         return values
 
     for i in range(len(values)):
-        swapped = False
+        swapped_in_pass = False
         end_index = len(values) - 1 - i
 
         for j in range(end_index):
+            action = "No swap"
+            swapped_this_step = False
             if values[j] > values[j + 1]:
                 values[j], values[j + 1] = values[j + 1], values[j]
-                swapped = True
+                swapped_this_step = True
+                swapped_in_pass = True
+                action = "Swapped"
 
-            _draw_frame(values, i + 1, j, end_index, swapped, delay)
+            _draw_frame(values, i + 1, j, end_index, action, swapped_this_step, delay)
 
-        if not swapped:
+        if not swapped_in_pass:
             break
 
     print(f"Original: {original}")
