@@ -77,3 +77,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 19:55
 - **Prompt**: what function should I move on to next
 
+### 27-03-2026 19:55
+- **Prompt**: Append a new JOURNAL.md entry for this interaction.  User prompt: "what function should I move on to next"  Response summary: - No code edits requested or performed. - Guided user on implementation order after _value_to_bar. - Recommended next function: _build_ascii_bar_row, then _draw_frame, then bubble_sort_visual. - Explained rationale: compose single-value conversion into row rendering before integrating into frame updates and sorting loop events.  Changes made: - No repository code changes; journal update only.  Context and reasons: - User asked for sequencing guidance to reduce confusion in visualization development.  Model: GPT-5.3-Codex Socratic mode: ON
+
