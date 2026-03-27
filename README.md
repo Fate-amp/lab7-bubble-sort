@@ -4,10 +4,23 @@ A beginner-friendly Python lab for practicing bubble sort and test-driven thinki
 
 ## What This Project Contains
 
-- A bubble sort app in `main.py`
+- App orchestration in `main.py`
+- Pure sorting logic in `sorting_logic.py`
+- Terminal UI in `terminal_ui.py`
+- Pygame UI in `pygame_ui.py`
 - Automated tests using pytest in `tests/test_main.py`
 - Pytest configuration in `pytest.ini`
+- Dependency list in `requirements.txt`
 - Progress log in `JOURNAL.md`
+
+## Architecture
+
+This project now follows separation of concerns:
+
+- `sorting_logic.py`: contains bubble sort algorithm and visualization step generation.
+- `terminal_ui.py`: responsible only for terminal drawing.
+- `pygame_ui.py`: responsible only for Pygame drawing.
+- `main.py`: imports logic/UI modules and decides what to run.
 
 ## Prerequisites
 
@@ -31,7 +44,7 @@ py -m venv .venv
 3. Install dependencies:
 
 ```powershell
-python -m pip install pytest
+python -m pip install -r requirements.txt
 ```
 
 ## Run the App
@@ -49,7 +62,7 @@ The script runs several built-in examples:
 
 ## Terminal Visualization
 
-The project also includes a terminal animation for bubble sort in `bubble_sort_visual`.
+The project includes a terminal animation in `terminal_ui.visualize_bubble_sort_terminal`.
 
 Current frame format:
 - `Pass`: current bubble-sort pass (1-based)
@@ -66,13 +79,12 @@ index | ####
 
 A caret `^` is shown on the row of the left compared index.
 
-### Enable Visualization Demo
+### Enable Terminal Demo
 
-In `main.py`, uncomment the visualization demo lines near the bottom:
+In `main.py`, uncomment the terminal demo line in `main()`:
 
 ```python
-# visual_input = [14, 1, 7, 13, 12, 2, 8, 10, 6, 5, 0, 3, 11, 9, 4]
-# bubble_sort_visual(visual_input, delay=0.15)
+# visualize_bubble_sort_terminal(visual_input, delay=0.15)
 ```
 
 Then run:
@@ -82,6 +94,37 @@ python main.py
 ```
 
 Tip: Increase `delay` (for example `0.3`) to slow down the animation.
+
+## Pygame Visualization
+
+The project includes a Pygame visualizer in `pygame_ui.visualize_bubble_sort_pygame`.
+
+Current implementation highlights:
+- Window-based animation using bars for each value
+- Compared pair highlighted during each step
+- Sorted tail highlighted
+- Header displays pass/action/swap-step metadata
+
+### Run Pygame Demo
+
+In the current `main.py`, Pygame visualization is enabled by default:
+
+```python
+visual_input = [14, 1, 7, 13, 12, 2, 8, 10, 6, 5, 0, 3, 11, 9, 4]
+visualize_bubble_sort_pygame(visual_input, fps=20)
+```
+
+Run:
+
+```powershell
+python main.py
+```
+
+Close the Pygame window to end the visualization loop.
+
+### Dependency Note
+
+This project uses `pygame-ce` in `requirements.txt` for compatibility with newer Python versions while keeping `import pygame` in code.
 
 ## Run Tests
 
@@ -111,6 +154,10 @@ The `bubble_sort` function includes TODO comments designed for learning. A good 
 ```text
 lab7-bubble-sort/
 ├── main.py
+├── sorting_logic.py
+├── terminal_ui.py
+├── pygame_ui.py
+├── requirements.txt
 ├── pytest.ini
 ├── tests/
 │   └── test_main.py
