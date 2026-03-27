@@ -188,3 +188,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 23:05
 - **Prompt**: Append a new JOURNAL.md entry for this interaction.  User prompt: "I'm seeing some inconsisitencies in the visualization. Why are those happening?"  Changes made: - No code edits in this interaction. - Inspected current main.py visualization logic and ran script for behavioral confirmation. - Prepared explanation of inconsistency causes in header semantics, marker placement style, frame timing/state update ordering, and bar scaling assumptions.  Context and reasons: - User requested diagnosis of visual inconsistencies; response explains root causes tied to current implementation choices.  Model: GPT-5.3-Codex Socratic mode: ON
 
+### 27-03-2026 23:08
+- **Prompt**: Can you fix these and then clean up the code and update the documentation
+
