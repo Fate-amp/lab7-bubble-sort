@@ -71,3 +71,6 @@ Automatically captured prompt log. Entries are appended in chronological order (
 ### 27-03-2026 19:54
 - **Prompt**: does my current implementation work?
 
+### 27-03-2026 19:54
+- **Prompt**: i mean the _value_to_bar
+
